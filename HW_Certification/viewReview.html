@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр отзывов о продуктах</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Отзывы о продуктах</h1>
+            <p class="subtitle">Ознакомьтесь с отзывами пользователей</p>
+            
+            <div class="nav-links">
+                <a href="addReview.html" class="nav-link"><i class="fas fa-plus-circle"></i> Добавить отзыв</a>
+                <a href="viewReview.html" class="nav-link"><i class="fas fa-list"></i> Просмотреть отзывы</a>
+            </div>
+        </header>
+        
+        <main>
+            <div class="card animate-fade-in">
+                <h2><i class="fas fa-tags"></i> Список продуктов</h2>
+                <p>Выберите продукт, чтобы просмотреть отзывы о нем:</p>
+                
+                <div class="product-list" id="productList">
+                    <!-- Здесь будет динамически формироваться список продуктов с помощью JavaScript -->
+                    <div class="empty-state" id="emptyProductList">
+                        <i class="fas fa-box-open"></i>
+                        <p>Пока нет добавленных продуктов</p>
+                        <a href="addReview.html" class="btn">Добавить первый отзыв</a>
+                    </div>
+                </div>
+                
+                <div class="clear-all-container" id="clearAllContainer" style="display: none;">
+                    <button class="clear-all-btn" id="clearAllBtn">
+                        <i class="fas fa-trash-alt"></i> Очистить все отзывы
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card animate-fade-in" id="reviewsCard">
+                <h2 id="selectedProductTitle"><i class="fas fa-comments"></i> Отзывы о продукте</h2>
+                
+                <div class="reviews-container" id="reviewsContainer">
+                    <!-- Здесь будут динамически формироваться отзывы с помощью JavaScript -->
+                    <div class="empty-state" id="emptyReviewsList">
+                        <i class="fas fa-comment-slash"></i>
+                        <p>Выберите продукт для просмотра отзывов</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Система отзывов о продуктах</p>
+        </footer>
+    </div>
+    
+    <!-- Здесь будет подключен JavaScript файл -->
+    <script src="app.js"></script>
+</body>
+</html>
